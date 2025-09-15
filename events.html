@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events - SAE AKGEC</title>
+  <link rel="stylesheet" href="events.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+        <div class="logo">
+      <img src="images/SAE LOGO.png" alt="SAE Logo">
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html" class="active">Events</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="reach us.html">Join Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Events Section -->
+  <section class="events">
+    <h1 class="events-title">EVENTS</h1>
+    <p class="events-subtitle">SAE AKGEC Participates In 3 Major Events</p>
+
+    <!-- Event 1 -->
+    <div class="event">
+    <div class="event-text">
+        <span>SUPRA <span class="event-line"></span>
+        <img src="images/screenshot.png"style="width: 200px;" alt="Logo"></span>
+        <p>
+        SAEINDIA, the Indian chapter of the Society of Automotive Engineers has been organizing the
+        event for its sixth consecutive year, which sees students from engineering colleges across
+        the country battle it out against each other in their quest to apply their technical knowledge
+        on the ground by conceptualizing and developing a formula racing car. SUPRA SAEINDIA comprise
+        of a series of Static and Dynamic events spread over five days, concluding with a final
+        Endurance run and a valedictory function.
+        </p>
+    </div>
+    <div class="event-images">
+        <img src="images/Mask group.png" alt="SUPRA Car 1">
+    </div>
+    </div>
+
+    <!-- Event 2 -->
+    <div class="event">
+      <div class="event-images">
+        <img src="images/Mask group2.png" alt="Efficycle Bike 1">
+      </div>
+      <div class="event-text">
+        <span>EFFICYCLE <span class="event-line"></span>
+        <img src="images/screenshot.png"style="width: 200px;" alt="Logo"></span>
+        <p>
+          This competition is an eco-friendly venture based upon Engineering design and manufacturing
+          of Electric bike completely by the students. The main aim of the event is to generate the
+          interest of the student in the field of eco-bikes, and to bring a new revolution in the
+          field of biking which can be commercialized as a usable product for the future generation.
+          Beside the comprehensive knowledge of manufacturing and fabricating a single seated DC motor
+          driven vehicle to manoeuvre on all types of terrains the E-Bike Racing Challenge has a chance
+          for participants to win many awards.
+        </p>
+      </div>
+    </div>
+        <div class="event">
+    <div class="event-text">
+        <span>E-BIKE <span class="event-line"></span>
+        <img src="images/screenshot.png"style="width: 200px;" alt="Logo"></span>
+        <p>
+        E-BIKE, the Indian chapter of the Society of Automotive Engineers has been organizing the event for its sixth consecutive year, which sees students from engineering colleges across the country battle it out against each other in their quest to apply their technical knowledge on the ground by conceptualizing and developing a formula racing car. SUPRA SAEINDIA comprise of a series of Static and Dynamic events spread over five days, concluding with a final Endurance run and a valedictory function.
+        </p>
+    </div>
+    <div class="event-images">
+        <img src="images/E-BIKE.png" alt="E_BIKE">
+    </div>
+    </div>
+    <h1 class="event-we-conduct">EVENT WE CONDUCT</h1>
+    <div class="event">
+      <div class="event-images">
+        <img src="images/aakar.png" alt="AAKAR">
+      </div>
+      <div class="event-text">
+        <span>AACAR <span class="event-line"></span>
+        <img src="images/screenshot.png"style="width: 200px;" alt="Logo"></span>
+        <p>
+        The main agenda of the workshop is to provide the students with a deep insight into the exciting world of automobiles. The workshop is about making students aware of the possibilities and advancements that can be achieved and the multi domain innovation in the world of cars. The workshop is organised in the month of FEB. of every year.
+        </p>
+      </div>
+    </div>
+        <div class="event">
+    <div class="event-text">
+        <span>INNOVACION <span class="event-line"></span>
+        <img src="images/screenshot.png"style="width: 200px;" alt="Logo"></span>
+        <p>
+        The workshop challenges young minds to learn, compete and provides a platform to be an innovator. The workshop is about making students aware of the possibilities that exist with microcontrollers and sensors. We want to encourage the students to think, create and be a change maker. The workshop is organized in the month of FEB.
+        </p>
+    </div>
+    <div class="event-images">
+        <img src="images/innovacion.png" alt="innovacion">
+    </div>
+    </div>
+  </section>
+<script>
+const events = document.querySelectorAll('.event');
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  },
+  {
+    threshold: 0.3
+  }
+);
+
+events.forEach(event => {
+  observer.observe(event);
+});
+</script>
+
+  <!-- Header -->
+  <header class="milestones-header">
+    <span class="trophy"><img src="images/trophy.png"></span>
+    <h1>MILESTONES</h1>
+  </header>
+
+  <!-- Timeline -->
+  <section class="timeline">
+        <!-- Right Card -->
+    <div class="container right">
+      <div class="content">
+        <h2>2015</h2>
+        <p>FIRST Runner-up at International <span class="highlight">Go-Kart</span> Championship</p>
+        <img src="images/flag.png" alt="flag">
+      </div>
+    </div>
+    <!-- Left Card -->
+    <div class="container left">
+      <div class="content">
+        <h2>2015</h2>
+        <p><span class="highlight">Dronacharya</span> Award (SAE Supra 2015)</p>
+        <img src="images/flag.png" alt="flag">
+      </div>
+    </div>
+
+    <!-- Right Card -->
+    <div class="container right">
+      <div class="content">
+        <h2>2016</h2>
+        <p>BEST <span class="highlight">CAE</span> Award (Effi-car, 2016)</p>
+        <img src="images/flag.png" alt="flag">
+      </div>
+    </div>
+        <!-- Left Card -->
+    <div class="container left">
+      <div class="content">
+        <h2>2016</h2>
+        <p>BEST <span class="highlight">INNOVATION</span> Award (SAE Supra 2016)</p>
+        <img src="images/flag.png" alt="flag">
+      </div>
+    </div>
+
+    <!-- Right Card -->
+    <div class="container right">
+      <div class="content">
+        <h2>2016</h2>
+        <p>Secured <span class="highlight">20th Position </span> Among 105 Teams At <span class="highlight">SAE-NIS EFFI-CYCLE</span> 2016</p>
+        <img src="images/flag.png" alt="flag">
+      </div>
+    </div>    <!-- Left Card -->
+    <div class="container left">
+      <div class="content">
+        <h2>2017</h2>
+        <p>The student have won the <span class="highlight">GRADEABILITY</span> Award in 2017</p>
+        <img src="images/flag.png" alt="flag">
+      </div>
+    </div>
+
+    <!-- Right Card -->
+    <div class="container right">
+      <div class="content">
+        <h2>2022</h2>
+        <p><span class="highlight">AIR 5 </span> at Effu-que 2022</p>
+        <img src="images/flag.png" alt="flag">
+      </div>
+    </div>
+  </section>
+
+  <script src="milestones.js"></script>
+</body>
+</html>

@@ -1,0 +1,445 @@
+/* =========================
+   Font Imports
+   ========================= */
+@font-face {
+  font-family: "Paladins";
+  src: url("fonts/Paladins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Paladins";
+  src: url("fonts/Paladins-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Paladins Outline";
+  src: url("fonts/PaladinsOutline-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Paladins Outline";
+  src: url("fonts/PaladinsOutline-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+/* =========================
+   Global Reset
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "paladins";
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   Navbar
+   ========================= */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 50px;
+  background: #111;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+nav .logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 100px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #ff5722;
+}
+
+/* =========================
+   Events Section
+   ========================= */
+.events {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  color: white;
+  padding: 100px 0 60px; /* padding-top to adjust for fixed navbar */
+}
+.events-title {
+  font-size: 68px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  color:#ff5722;
+  margin-bottom: 10px;
+  background-color: white;
+  font-family: paladins outline;
+}
+.event-we-conduct{
+  color: #111;
+  background-color: white;
+  text-align: center;
+  font-size: 49px;
+  font-family: paladins outline;
+
+}
+
+.events-subtitle {
+  text-align: center;
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Event Container */
+.event {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: nowrap;
+  padding: 50px 5%;
+  background: #fff;
+  position: relative;
+}
+
+/* Event Text */
+.event-text {
+  flex: 1 1 50%;
+  color: #444;
+}
+.event-text span{
+  font-size: 36px;
+  font-weight: 1000;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  color: #111;
+  font-family:"paladins";
+}
+.event-text h2 {
+  font-size: 36px;
+  font-weight: 1000;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  color: #111;
+  font-family:paladins;
+}
+
+.event-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  text-align: justify;
+}
+
+/* Event Images */
+.event-images {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.event-images img {
+  width: 78%;
+  object-fit: cover;
+  border: none;             /* Remove colored borders */
+}
+
+/* Reverse layout for alternate events */
+.event.reverse {
+  flex-direction: row-reverse;
+}
+/* =========================
+   Responsive Design
+   ========================= */
+@media (max-width: 1024px) {
+  .event {
+    flex-direction: column;
+    padding: 50px 5%;
+  }
+
+  .event-images img {
+    width: 50%;
+    border-radius: 24px; /* soften pill shape for small screens */
+  }
+}
+
+@media (max-width: 768px) {
+    nav {
+    padding: 15px 20px;
+  }
+
+  nav ul {
+    gap: 20px;
+  }
+  .events-title {
+    font-size: 36px;
+  }
+
+  .events-subtitle {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .event-text h2 {
+    font-size: 28px;
+  }
+
+  .event-text p {
+    font-size: 16px;
+  }
+
+  .event-images {
+    gap: 10px;
+  }
+}
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "paladins", sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #333;
+}
+
+/* =========================
+   Navbar
+   ========================= */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 50px;
+  background: #111;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+nav .logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 100px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff5722;
+}
+
+/* Header */
+.milestones-header {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 80px 0 20px; /* padding-top to adjust for fixed navbar */
+}
+.milestones-header h1{
+    font-family: paladins outline;
+}
+.milestones-header img {
+  width: 80px;
+  max-width: 100%;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+/* Line */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background: #ff5722;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+/* Containers */
+.container {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+}
+
+.container.left {
+  left: 0;
+}
+
+.container.right {
+  left: 50%;
+}
+
+/* Dots */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -11px;
+  background: #fff;
+  border: 3px solid #ff5722;
+  top: 30px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.container.right::after {
+  left: -11px;
+}
+
+/* Content Box */
+.content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 15px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.content h2 {
+  color: #ff5722;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.content .highlight {
+  color: #ff5722;
+  font-weight: bold;
+}
+
+.content img {
+  margin-top: 10px;
+  width: 100px;
+  max-width: 100%;
+}
+
+/* Hover effect */
+.content:hover {
+  transform: scale(1.05);
+  background: #fffbf8;
+  box-shadow: 0 8px 20px rgba(255,87,34,0.3);
+}
+
+/* ---------------------- */
+/* RESPONSIVE DESIGN */
+/* ---------------------- */
+@media screen and (max-width: 768px){
+  nav {
+    padding: 15px 20px;
+  }
+  nav ul {
+    gap: 20px;
+  }
+  .timeline::after {
+    left: 20px; /* Move line to the left */
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 25px;
+    margin-bottom: 30px;
+  }
+
+  .container::after {
+    left: 15px; /* Dot aligned with line */
+    right: auto;
+  }
+
+  .container.left,
+  .container.right {
+    left: 0; /* All stacked vertically */
+  }
+
+  .content {
+    text-align: left;
+  }
+
+  .milestones-header img {
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content h2 {
+    font-size: 18px;
+  }
+
+  .content p {
+    font-size: 14px;
+  }
+
+  .content img {
+    width: 80px;
+  }
+}

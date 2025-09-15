@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAE Club Form</title>
+  <link rel="stylesheet" href="reach us.css">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+      <!-- Navigation -->
+  <nav>
+    <div class="logo">
+      <img src="images/SAE LOGO.png" alt="SAE Logo">
+    </div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <ul id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="reach us.html" class="active">Join Us</a></li>
+    </ul>
+  </nav>
+<div class="main-content">
+  <div class="container">
+    <form id="saeForm">
+      <h2>LET’S WORK <span class="highlight">TOGETHER</span></h2>
+
+      <div class="row">
+        <div class="field">
+          <label>Name</label>
+          <input type="text" name="name" required>
+        </div>
+        <div class="field">
+          <label>Email Address</label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="field">
+          <label>Student No</label>
+          <input type="text" name="studentNo" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label>Branch</label>
+          <input type="text" name="branch" required>
+        </div>
+        <div class="field">
+          <label>Section</label>
+          <input type="text" name="section" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label>Phone No</label>
+          <input type="text" name="phone" required>
+        </div>
+        <div class="field">
+          <label>Hostel/Day Scholar</label>
+          <div>
+            <input type="radio" name="residence" value="Hosteler"> Hosteler
+            <input type="radio" name="residence" value="Day Scholar"> Day Scholar
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Domains</label><br>
+        <input type="checkbox" name="domains" value="Domain 1"> Domain 1
+        <input type="checkbox" name="domains" value="Domain 2"> Domain 2
+        <input type="checkbox" name="domains" value="Domain 3"> Domain 3
+        <input type="checkbox" name="domains" value="Domain 4"> Domain 4
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+    <p id="formMessage"></p>
+  </div>
+  <div class="contact-image">
+    <img src="images/bulb.png" alt="idea bulb Illustration">
+  </div>
+  </div>
+
+<footer class="footer">
+  <!-- Top Section -->
+  <div class="footer-top">
+    <div class="footer-title">
+      <span>REACH US</span>
+      <img src="images/logo.jpg"style="width: 200px;" alt="Logo">
+    </div>
+    <a href="ru.html" class="faq-btn">Feedback →</a>
+  </div>
+
+  <!-- Middle Section -->
+  <div class="footer-content">
+    <!-- Column 1: Logo / Contact -->
+    <div class="footer-logo">
+      <img src="images/SAE LOGO.png" alt="Logo">
+      <h3>Contact Us</h3>
+      <p>+91 81004 84089</p>
+    </div>
+
+    <!-- Column 2: Center Info -->
+    <div class="footer-center">
+      <h3>Email Us</h3>
+      <p>saeclub@akgec.ac.in</p>
+    </div>
+
+    <!-- Column 3: Social Handles -->
+    <div class="footer-social">
+      <h3>Social Handles</h3>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/sae_akgec"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="mailto:saeclub@akgec.ac.in"><img src="images/email.png" alt="Email"></a>
+        <a href="https://www.facebook.com/saeakgec"><img src="images/facebook.png" alt="Facebook"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Section -->
+  <div class="footer-bottom">
+    <p>copyright @saeakgec</p>
+  </div>
+</footer>
+<script src="reach us.js">
+  document.getElementById("saeForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const messageEl = document.getElementById("formMessage");
+
+    const formData = {
+      name: this.name.value,
+      email: this.email.value,
+      student_no: this.studentNo.value,
+      branch: this.branch.value,
+      section: this.section.value,
+      phone_no: this.phone.value,
+      hostel_status: this.residence.value,
+      domain: Array.from(this.querySelectorAll("input[name='domains']:checked"))
+                   .map(cb => cb.value)
+                   .join(", ")
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbysuy0awIrwG1rmljuAFDdLif48_lviT5IY2Q99-YKpXdRSGvwFqt5AAZNfg18u-sdb/exec", {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: { "Content-Type": "application/json" }
+    })
+    .then(res => res.text())
+    .then(data => {
+      messageEl.textContent = "✅ Form submitted successfully!";
+      messageEl.style.color = "green";
+      this.reset();
+
+      // Fade out after 5 seconds
+      setTimeout(() => {
+        messageEl.textContent = "";
+      }, 5000);
+    })
+    .catch(err => {
+      messageEl.textContent = "❌ Error submitting form. Please try again.";
+      messageEl.style.color = "red";
+
+      // Fade out after 5 seconds
+      setTimeout(() => {
+        messageEl.textContent = "";
+      }, 5000);
+    });
+  });
+</script>
+</body>
+</html>

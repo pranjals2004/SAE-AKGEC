@@ -1,0 +1,317 @@
+/* =========================
+   Font Imports
+   ========================= */
+@font-face {
+  font-family: "Paladins";
+  src: url("fonts/Paladins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Paladins";
+  src: url("fonts/Paladins-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Paladins Outline";
+  src: url("fonts/PaladinsOutline-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Paladins Outline";
+  src: url("fonts/PaladinsOutline-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* =========================
+   Global Reset
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "paladins";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* =========================
+   Navbar
+   ========================= */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 50px;
+  background: #111;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+nav .logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 100px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff5722;
+}
+
+/* =========================
+   Hero Section
+   ========================= */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("images/image.png") no-repeat center top/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* overlay */
+  z-index: 1;
+}
+
+.hero-content {
+  z-index: 2;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 51px;
+  line-height: 100%;
+  text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.hero h1 .normal {
+  font-family: "Paladins", sans-serif;
+  font-weight: 700;  /* Bold version */
+}
+
+.hero h1 .outline {
+  font-family: "Paladins Outline", sans-serif;
+  font-weight: 400;
+  color: #ff5722;
+}
+
+.hero p {
+  font-size: 20px;
+  margin: 20px 0;
+  color: #ccc;
+}
+
+/* Hero Buttons */
+.buttons {
+  margin-top: 30px;
+}
+
+.buttons a {
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin: 0 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.buttons .about {
+  background: #ff5722;
+  color: #fff;
+}
+
+.buttons .about:hover {
+  background: #e64a19;
+}
+
+.buttons .join {
+  border: 2px solid #ff5722;
+  color: #ff5722;
+}
+
+.buttons .join:hover {
+  background: #ff5722;
+  color: #fff;
+}
+
+/* =========================
+   Stats Section
+   ========================= */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding: 80px 20px;
+  background: #111;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  text-align: center;
+}
+
+.stat-box h2 {
+  font-size: 40px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.stat-box p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #aaa;
+}
+
+.stat-box span {
+  color: #ff5722;
+  font-weight: 600;
+}
+
+/* =========================
+   What We Do Section
+   ========================= */
+.what-we-do {
+  background: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 10%;
+  overflow-y: auto;
+}
+
+.what-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 40px;
+}
+
+.what-text {
+  flex: 1 1 50%;
+}
+
+.what-text h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.what-text h2 .line-icon {
+  display: inline-block;
+  width: 140px;
+  height: 8px;
+  background: linear-gradient(to right, #ff4c1e 40%, #555 40%);
+  border-radius: 4px;
+}
+
+.what-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  text-align: justify;
+}
+
+.what-image {
+  flex: 1 3 40%;
+  text-align: center;
+}
+
+.what-image img {
+  max-width: 650px;
+  width: 100%;
+  height: auto;
+}
+
+/* =========================
+   Responsive Design
+   ========================= */
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 20px;
+  }
+
+  nav ul {
+    gap: 20px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .stats {
+    gap: 40px;
+  }
+
+  .stat-box h2 {
+    font-size: 28px;
+  }
+
+  .what-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .what-text, .what-image {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .what-text p {
+    text-align: center;
+  }
+}
