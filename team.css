@@ -117,3 +117,10 @@ nav ul li a.active {
     z-index:35;
   }
   .title-wrap h1{ font-size:1.2rem; font-weight:600; color:#fff; margin-left:4px }
+  @media screen and (max-width: 768px){
+  nav {
+    padding: 15px 20px;
+  }
+  nav ul {
+    gap: 20px;
+  }}
