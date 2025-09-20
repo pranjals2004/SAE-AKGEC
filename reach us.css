@@ -28,12 +28,15 @@
   font-weight: 700;
   font-style: normal;
 }
+html {
+  scroll-behavior: smooth;
+}
 /* Main layout */
 body {
-  font-family: "paladins";
+  font-family: Paladins;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content:center;
+  align-items: center;
   padding-top: 150px; /* To avoid navbar overlap */
   background: #fff;
   flex-wrap: wrap;
@@ -74,7 +77,7 @@ body {
   body {
     flex-direction: column;   /* ✅ stack form and image vertically */
     align-items: center;
-    padding: 120px 20px 20px; /* keep navbar spacing */
+    padding: 120px 0px 0px; /* keep navbar spacing */
   }
 
   .contact-image {
@@ -92,12 +95,13 @@ body {
 
 .main-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;   /* ✅ vertical centering */
   min-height: calc(100vh - 80px); /* viewport minus navbar */
   padding: 0 50px;
   margin-top: 80px; /* avoid navbar overlap */
   flex-wrap: wrap;
+  background-color: #fff;
 }
 
 /* =========================
@@ -138,6 +142,9 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+  color: #ff5722;
+}
+nav ul li a.active {
   color: #ff5722;
 }
 /* Responsive Navbar */
@@ -242,6 +249,7 @@ button:hover {
   padding: 40px 50px 20px;
   position: relative;
   width: 100%;
+  background: linear-gradient(to right, #111, #222);
 }
 
 /* Top Section */
