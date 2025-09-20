@@ -124,4 +124,11 @@ nav ul li a.active {
   }
   nav ul {
     gap: 20px;
-  }}
+  }
+    .team{
+    margin-top: 100px;
+  }
+  .title-wrap{
+    margin-top: 10px;
+  }
+  }
